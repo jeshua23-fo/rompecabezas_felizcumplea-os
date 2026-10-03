@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ed">
+  <title>holi</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+
+    <section class="game" aria-label="Juego de rompecabezas">
+      <div class="play-area">
+        <div class="board-heading">
+          <h2>El tablero</h2>
+          <button class="preview-toggle" id="preview-toggle" type="button" aria-pressed="false">
+            Ver imagen
+          </button>
+        </div>
+        <div class="board" id="board" aria-label="Tablero del rompecabezas">
+          <video class="completion-video" id="completion-video" loop muted playsinline aria-label="Animación del rompecabezas completado">
+            <source src="img/gif_rompecabezas.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="game-status" id="game-status" aria-live="polite">Elige una pieza y colócala en su lugar.</p>
+      </div>
+
+      <aside class="side-panel" aria-label="Piezas y progreso">
+        <div class="stats" aria-label="Progreso">
+          <div class="stat">
+            <span class="stat-label">PIEZAS</span>
+            <strong id="pieces-count">0 / 9</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">MOVIMIENTOS</span>
+            <strong id="moves-count">0</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">TIEMPO</span>
+            <strong id="timer">00:00</strong>
+          </div>
+        </div>
+
+        <div class="pieces-heading">
+          <div>
+            <p class="eyebrow">LAS PIEZAS</p>
+          </div>
+          <button class="shuffle-button" id="shuffle-button" type="button" aria-label="Mezclar piezas" title="Mezclar piezas">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5" /></svg>
+          </button>
+        </div>
+        <div class="pieces-tray" id="pieces-tray" aria-label="Piezas disponibles"></div>
+        <button class="reset-button" id="reset-button" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" /></svg>
+          Empezar de nuevo
+        </button>
+      </aside>
+    </section>
+
+  </main>
+
+</body>
+</html>
